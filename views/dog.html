@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog Breeds</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
+	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/animal_list.js"></script>
+	<meta charset="utf-8">
+</head>
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body ng-app="myApp" ng-controller="animalController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+		<div data-ng-include="'menu.html'"></div>
+		<div><h3>DOG BREEDS (Commonly found in Nigeria)</h3></div>
+		<div style="float: left; clear: right;">
+			<div class="side-bar" id="list-of-breed"> 
+				<div class="lists" ng-click="getPicture('Boerboel')" id="boerboel-dog"><h4>BOERBOEL</h4>
+				<p>Boerboel (South African Mastiff) is a large breed from South African bred for the purpose of guarding the homestead. They can weigh up to 50-80kg, with height of up to 60-70cm. Their body color can be with or without a black mask: fawn, red, brown, brindle, piebald and irish markings, and cream brindles.</p></div>
+
+				<div class="lists" ng-click="getPicture('Bulldog')" id="bull-dog"><h4>BULLDOG</h4>
+				<p>Bulldog (British Bulldog or English Bulldog) is a medium-sized breed of dog that originated from England. It is a muscular hefty dog wit wrinkled face and a distinctive pushed-in nose. They have an average weight of 18-23kg and height of 1-2 feet. Their body color can be solid white, red, fawn, brindle or piebald. They are known for their aggressive nature but are very good with children. They require exercise just like other dogs, else they become overweight which could lead to heart and lung problem and also cause stress on the joint.</p></div>
+
+				<div class="lists" ng-click="getPicture('Bullmastiff')" id="bullmastiff-dog"><h4>BULLMASTIFF</h4>
+				<p>Bullmastiff is a large-sized dog with a solid build and short muzzle that originated from the United Kingdom. They can weigh up to 40-60kg and height of up to 60-70cm. their color can be any shade of brindle, fawn or red.</p></div>
+
+				<div class="lists" ng-click="getPicture('Caucasian Shepherd')" id="caucasian-dog"><h4>CAUCASIAN SHEPHERD</h4>
+				<p>Caucasian Shepherd originates from countries of the Caucasus region (Georgia, Armenia and Azerbaijan). They weigh up to 45-105kg, their body color is any solid color, piebald or spotted color, except black and silver.</p></div>
+
+				<div class="lists" ng-click="getPicture('Chihuahua')" id="chihuahua-dog"><h4>CHIHUAHUA</h4>
+				<p>Chihuahua is a smallest breed of dog named after the state of Chihuahua in Mexico. It comes in varying colors (white, black, tan and many of colors). They weigh between 1.5-3kg and height of 15-25cm, they can be short-haired or long coated.</p></div>
+				<div class="lists" ng-click="getPicture('Chowchow')" id="chowchow-dog"><h4>CHOW CHOW</h4>
+				<p>Chow Chow (Chow) is a breed that originated from northern China. Can weigh up to 20-32kg and height of up to 24-51cm. body color can be; red (light gold to deep red-brown), cinnamon (light tan to brown), black, cream or blue. The breed is distinguished by its blue-black/purple tongue</p></div>
+				<div class="lists" ng-click="getPicture('Dalmatian')" id="dalmatian-dog"><h4>DALMATIAN</h4>
+				<p>Dalmatian is a medium-sized dog, with unique black or liver spotted coat originating from Croatia (Historical region of Dalmatian) with a height of 50-60cm.</p></div>
+				<div class="lists" ng-click="getPicture('Doberman')" id="doberman-dog"><h4>DOBERMANN</h4>
+				<p>Dobermann (Doberman Pinscher) from Germany is a medium-large breed of domestic dog. They can weigh up to 30-45kg, with black, red, blue, fawn body color. They are often stereotyped as been ferocious and aggressive.</p></div>
+				<div class="lists" ng-click="getPicture('English Mastiff')" id="english-mastiff"><h4>ENGLISH MASTIFF</h4>
+				<p>English Mastiff is an extremely large breed originating from Britain. Weigh up to 50-120kg and height up to 76cm. Body color is fawn, apricot-fawn, silver-fawn, dark fawn-brindle.</p></div>
+				<div class="lists" ng-click="getPicture('German Shepherd')" id="german-shepherd"><h4>GERMAN SHEPHERD</h4>
+				<p>German Shepherd (Alsatian) is a breed of medium to large sized working dog from Germany. Weighs up to 20-40kg and have height of 50-65cm. they are known for their strength, intelligence, trainability and obedience. Body color is mostly tan with black saddler.</p></div>
+				<div class="lists" ng-click="getPicture('Great Dane')" id="great-dane"><h4>GREAT DANE</h4>
+				<p>Great Dane (Gentle Giant) is a German breed known for its giant size, weighs up to 50-82kg and height up to 70-80cm. body color can be fawn, brindle, black, harlequin, mantle or blue. They are friendly breed, they do not exhibit extreme aggressiveness.</p></div>
+				<div class="lists" ng-click="getPicture('Lhasa Apso')" id="lhasa-apso"><h4>LHASA APSO</h4>
+				<p>Lhasa Apso is a non-sporting dog originating from Tibet, it can appear in all forms of dog color weighs up to 7-8kg with height of up to 26-28cm</p></div>
+				<div class="lists" ng-click="getPicture('Neopolitan Mastiff')" id="neopolitan-mastiff"><h4>NEOPOLITAN MASTIFF</h4>
+				<p>Neopolitan Mastiff (Mastino) is a large breed from Italy often used as a guard and defender of family, weighs up to 50-70kg and height of up to 60-80cm.</p></div>
+				<div class="lists" ng-click="getPicture('Pitbull')" id="pitbull-dog"><h4>PITBULL</h4>
+				<p>Pit bull is the common name for a type of dog descended from bulldogs and terriers. Formal breeds often considered to be of the pit bull type include the American Pit Bull Terrier, American Staffordshire Terrier, American Bully, and Staffordshire Bull Terrier. They are known as aggressive breed of dogs.</p></div>
+				<div class="lists" ng-click="getPicture('Pug')" id="pug-dog"><h4>PUG</h4>
+				<p>Pug (Chinese pug) is a breed with physically distinctive features of wrinkly, short-muzzled face and curled tail. They originated from China. Pugs are known for being sociable and gentle companion dogs</p></div>
+				<div class="lists" ng-click="getPicture('Rottweiler')" id="rottweiler-dog"><h4>ROTTWEILER</h4> 
+				<p>Rottweiler (Rott) is a medium to large-size breed from Germany used as search and rescue dogs, guard dogs, police dogs. The weigh up to 35-60kg, and have height up to 70cm. they have distinctive color marking; black with well defined mahogany or rust-colored markings that do not take up to 10% of the dogs’ body color.</p></div>
+				<div class="lists" ng-click="getPicture('Samoyed')" id="samoyed-dog"><h4>SAMOYED</h4>
+				<p>Samoyed (Sammy) is a breed with a breed with a thick, double layer coat from Northwest Russia and Western Siberia. An aggressive Samoyed is rare, with their tendency to bark, however, they can serve as an intelligent house watch as they bark when something is approaching their territory</p></div>
+				<div class="lists" ng-click="getPicture('Saint Bernard')" id="saint-benard"><h4>SAINT BERNARD</h4>
+				<p>St. Bernard (Saint) is a breed of very large working dog from Italy. They have an average weight of 65-120kg and height of 70-90cm. they are calm patient and sweet with adult and especially children.</p></div>
+				<div class="lists" ng-click="getPicture('Tibetan Mastiff')" id="tibetan-mastiff"><h4>TIBETAN MASTIFF</h4>
+				<p>Tibetan Mastiff (Tibet) is a large dog breed originating from Tibet; they can weigh up to 50-115kg. They are known as flock guardian dog, they are intelligent and stubborn to a fault.</p></div>
+			</div>
+			<div class="side-bar" id="image-bar">
+				<div class="animal-pic">
+					<img class="animal-picture" src="//getAddress//" ng-animate-swap="getAddress"/>
+				</div>
+				<div>
+					<p style="font-style: fantasy; color: rgb(65%, 36%, 67%)">//animalName//</p>
+				</div>
+				<div style="width: 100%" ng-bind-html="animalDescription">
+				</div>
+			</div>
+		</div>
+		<div data-ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>

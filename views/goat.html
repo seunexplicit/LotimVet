@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Goats</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
+	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/animal_list.js"></script>
+	<meta charset="utf-8">
+	<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+</head>
+<body ng-app="myApp" ng-controller="goatController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+		<div data-ng-include="'menu.html'"></div>
+		<div><h3>GOAT BREEDS (Commonly found in Nigeria)</h3></div>
+		<div style="float: left; clear: right;">
+			<div class="side-bar" id="list-of-breed"> 
+				<div class="lists" ng-click="getPicture('Red Maradi')" id="red-sokoto"><h4>RED SOKOTO/ RED MARADI</h4>
+				<p>The Red Maradi goat is found in the South-West of Zinder in Niger, but also in the North-Western Nigeria. The Red Maradi goat is distinguishable from other species by its much larger, conformation, prolificacy and especially its red colour from which it earned its name. The coat or wool is uniform, shiny, with mahogany tints, the hair is short and dense on a soft skin. </p></div>
+
+				<div class="lists" ng-click="getPicture('Sahel')" id="sahel-goat"><h4>SAHEL</h4>
+				<p>The Sahelian goat is a breed of goat from West Africa, used mainly for meat and skin production. The Sahelian goat is not a trypano-tolerant goat breed, and they usually do not survive for long in forest and dense savanna. They are very strong animals which are found to survive well only in desert environments. Sahelian goat is a small sized animal. They are thin in appearance with narrow body, shallow chest and sloping short croup. They have stiff short hair with variety of colors. Their color varies from pure white, cream to red, black or gray sprinkled or pied, gray, brown or black. They have long legs, and pendent or semipendulous ears. Both bucks and does have horns.</p></div>
+
+				<div class="lists" ng-click="getPicture('West African Dwarf')" id="west-african-dwarf"><h4>WEST AFRICAN DWARF (WAD) </h4>
+				<p>The West African Dwarf goat breed is from coastal West and Central Africa. They are markedly stunted, both sexes have horns, which curve outwards and backwards in males. Males also have beards and sometimes manes. Most have short stiff hair, and colour varies; dark brown with black points is the most common, but black, red, white, pied and multi-coloured are also seen. They are capable of breeding at twelve to eighteen months. Multiple births are very common, with twins being normal and triplets frequent.  Nigerian West African Dwarf goats are trypanotolerant (they resist to infections by Trypanosoma) and haemonchotolerant than other breeds of domestic goat.</p></div>
+			</div>
+			<div class="side-bar" id="image-bar">
+				<div class="animal-pic">
+					<img class="animal-picture" src="//getAddress//" ng-animate-swap="getAddress"/>
+				</div>
+				<div>
+					<p style="font-style: fantasy; color: rgb(65%, 36%, 67%)">//animalName//</p>
+				</div>
+				<div style="width: 100%" ng-bind-html="animalDescription">
+				</div>
+			</div>
+		</div>
+		<div data-ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>

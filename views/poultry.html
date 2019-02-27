@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poultry</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
+	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/animal_list.js"></script>
+	<meta charset="utf-8">
+</head>
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body ng-app="myApp" ng-controller="poultryController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+		<div data-ng-include="'menu.html'"></div>
+		<div><h3>POULTRY BREEDS (Commonly found in Nigeria)</h3></div>
+		<div style="float: left; clear: right;">
+			<div class="side-bar" id="list-of-breed"> 
+				<div class="lists" ng-click="getPicture('ISA Brown')" id="isa-brown"><h4>ISA BROWN</h4>
+				<p>The ISA Brown is a crossbreed of chicken. It is thought to have been the result of a complex series of crosses including but not limited to Rhode Island Reds and Rhode Island Whites. They are layers known for its high egg production of approximately 300 eggs per hen in the first year of laying. They are brown in colour and also lays brown coloured eggs. They are highly suitable with Nigerians weather conditions.</p></div>
+
+				<div class="lists" ng-click="getPicture('Cornish Cross Broiler')" id="cornish-cross"><h4>CORNISH CROSS BROILER</h4>
+				<p>The Cornish Cross Broiler is the best meat chicken available. They gain weight rapidly (up to/above 2kg at 6 weeks) and have a good feed to weight ratio. They are white in colour.</p></div>
+
+				<div class="lists" ng-click="getPicture('Red Broiler')" id="red-broiler"><h4>RED BROILER</h4>
+				<p>Red broilers, don't mature as fast as the Cornish crosses. It takes them twice as long, 12 weeks to reach market size.  As their name implies, these birds have feathering of various shades of red, and some have dark tails. </p></div>
+
+				<div class="lists" ng-click="getPicture('Rhode Island Red')" id="rhode-island-red"><h4>RHODE ISLAND RED</h4>
+				<p>The Rhode Island Red is an American breed of domestic chicken.  It was a dual-purpose breed, raised both for meat and for eggs; modern strains have been bred for their egg laying abilities. The feathers are rust-colored, however darker shades are known, including maroon bordering on black. Chicks are a light red to tan color. It lays 200–300 brown eggs per year.</p></div>
+			</div>
+			<div class="side-bar" id="image-bar">
+				<div class="animal-pic">
+					<img class="animal-picture" src="//getAddress//" ng-animate-swap="getAddress"/>
+				</div>
+				<div>
+					<p style="font-style: fantasy; color: rgb(65%, 36%, 67%)">//animalName//</p>
+				</div>
+				<div style="width: 100%" ng-bind-html="animalDescription">
+				</div>
+			</div>
+		</div>
+		<div data-ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>

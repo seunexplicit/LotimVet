@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pigs</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
+	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/animal_list.js"></script>
+	<meta charset="utf-8">
+</head>
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body ng-app="myApp" ng-controller="pigController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+		<div data-ng-include="'menu.html'"></div>
+		<div><h3>Pig BREEDS (Commonly found in Nigeria)</h3></div>
+		<div style="float: left; clear: right;">
+			<div class="side-bar" id="list-of-breed"> 
+				<div class="lists" ng-click="getPicture('Duroc')" id="duroc"><h4>DUROC</h4>
+				<p>The Duroc pig is an older breed of domestic pig. The breed was developed in the United States and formed the basis for many mixed-breed commercial hogs. Duroc pigs are reddish-brown, large-framed, medium length, and muscular, with partially-drooping ears. They tend to be one of the least aggressive of all swine breeds raised for meat. They grow fastest out of all other breeds. Average live weight of matured male 300kg and female is 250kg. High prolificacy, with a litter size of 9 with high weaning rate.</p></div>
+
+				<div class="lists" ng-click="getPicture('Hampshire')" id="hampshire"><h4>HAMPSHIRE</h4>
+				<p>The Hampshire pig is a domestic swine breed characterized by erect ears, a black body, and a white band around the middle, covering the front legs. Hampshire hogs are noted for being well-muscled and rapid growers, and for exhibiting good carcass quality when used as meat animals. Hampshires are good tempered; they do not grow as fast as many cross-bred. Average live weight of matured male 300kg and female is 250kg.</p></div>
+
+				<div class="lists" ng-click="getPicture('Landrace')" id="landrace"><h4>LANDRACE</h4>
+				<p>The term Landrace pig or Landrace swine refers to any of a group of standardized breeds of domestic pig, and in this context the word Landrace is typically capitalized. The original breed by this name was the Danish Landrace pig, from which the others were derived through development and crossbreeding. They are noted for having the highest number of pigs per litter,(average litter size of 11) with good weaning rate. Average Live weight for matured male is 310-400kg and female is 250-330kg. </p></div>
+
+				<div class="lists" ng-click="getPicture('Yorkshire')" id="yorkshire"><h4>YORKSHIRE</h4>
+				<p>Yorkshire has large, erect ears and is muscular with a high proportion of lean meat. The American Yorkshire data has been maintained with great diligence, including growth, sow productivity, and back fat formation, representing the largest source of documented livestock performance records in the world. Live weight of a mature male 300-450kg and female 250-350kg. High prolifacy, with litter size of 12 and 7 pairs of teats. Widely used for upgrading local breeds. </p></div>
+			</div>
+			<div class="side-bar" id="image-bar">
+				<div class="animal-pic">
+					<img class="animal-picture" src="//getAddress//" ng-animate-swap="getAddress"/>
+				</div>
+				<div>
+					<p style="font-style: fantasy; color: rgb(65%, 36%, 67%)">//animalName//</p>
+				</div>
+				<div style="width: 100%" ng-bind-html="animalDescription">
+				</div>
+			</div>
+		</div>
+		<div data-ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>

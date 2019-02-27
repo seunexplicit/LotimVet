@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cat Breeds</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
+	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/animal_list.js"></script>
+	<meta charset="utf-8">
+</head>
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body ng-app="myApp" ng-controller="catController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+		<div data-ng-include="'menu.html'"></div>
+		<div><h3>CAT BREEDS</h3></div>
+		<div style="float: left; clear: right;">
+			<div class="side-bar" id="list-of-breed"> 
+				<div class="lists" ng-click="getPicture('Bengal')" id="bengal-cat"><h4>BENGAL</h4>
+				<p>The Bengal cat is a domestic cat breed originating from USA, developed to look like a leopard cat. Bengals come in a variety of coat colors: silver, brown, black (melanistic), snow, red, cinnamon, smoke, charcoal, blue (dilute), and marbled. They can also have spots, rosettes or a marbled pattern to their coat with fur that is very soft and short.</p></div>
+
+				<div class="lists" ng-click="getPicture('Burmese')" id="burmese"><h4>BURMESE</h4>
+				<p>The Burmese cat is a breed of domestic cat, originating from Thailand, developed in the United States and Britain. Originally, all Burmese cats were dark brown (sable), but are now available in a wide variety of colours. They are a small to medium size breed, tending to be about 4–6 kg. Color is solid and must be uniform over the body.</p></div>
+
+				<div class="lists" ng-click="getPicture('Chartreux')" id="chartreux"><h4>CHARTREUX</h4>
+				<p>The Chartreux is a rare breed of domestic cat from France and is large and muscular with relatively short, fine-boned limbs, and very fast reflexes. They are known for their blue (grey) water-resistant short hair double coats which are often slightly nappy in texture and orange- or copper-colored eyes. Chartreux cats are also known for their "smile": due to the structure of their heads and their tapered muzzles, they often appear to be smiling.</p></div>
+
+				<div class="lists" ng-click="getPicture('Egyptian Mau')" id="egyptian-mau"><h4>EGYPTIAN MAU</h4>
+				<p>Egyptian Maus are small to medium-sized short-haired rare cat breed originating from Egypt. They are one of the few naturally spotted breeds of domesticated cat, with spots only on the tips of the hairs of its coat. It is the fastest of the domestic cats, with its longer hind legs, and unique flap of skin extending from the flank to the back knee, providing for greater agility and length of stride.</p></div>
+
+				<div class="lists" ng-click="getPicture('European Shorthair')" id="european-shorthair"><h4>EUROPEAN SHORTHAIR</h4>
+				<p>The European Shorthair, is a cat breed originating in Europe. The European Shorthair is a muscular, medium-sized to large cat, with a broad, well-muscled chest.  The European Shorthair's dense coat is short, glossy and springy, it should only be shorthaired. All natural colours are permitted, such as black, red, blue and cream, with or without tabby, silver or white markings.</p></div>
+				<div class="lists" ng-click="getPicture('Oriental Shorthair')" id="oriental-shorthair"><h4>ORIENTAL SHORTHAIR</h4>
+				<p>The Oriental Shorthair is a breed of domestic cat originating from United States. It appears in a wide range of coat colors and patterns. Orientals have almond-shaped eyes, a triangular head shape, large ears, and an elongated, slender, and muscular body. Despite their slender appearance, they are athletic and can leap into high places. They are social and intelligent.</p></div>
+				<div class="lists" ng-click="getPicture('Ragdoll')" id="ragdoll-cat"><h4>RAGDOLL</h4>
+				<p>The Ragdoll is a cat breed with blue eyes and mostly gray and white patterns originating from United States. It is a large and muscular semi-longhair cat with a soft and silky coat. Popular in both the United Kingdom and the breed's native US, ragdoll cats often are known as "dog-like cats" or "puppylike cats" due to behaviors such as their tendency to follow people around, their ease at being physically handled, and their relative lack of aggression toward other pets.</p></div>
+				<div class="lists" ng-click="getPicture('Siamese')" id="siamese-cat"><h4>SIAMESE</h4>
+				<p>The Siamese cat is one of the first distinctly recognized breeds of Asian cat derived from Thailand. The refined modern Siamese is characterized by blue almond-shaped eyes; a triangular head shape; large ears; an elongated, slender, and muscular body; and point colouration. Siamese tend to seek human interaction and also like companionship from other cats. The Siamese (sometimes in the traditional form) is among the foundation stock of several other breeds developed by crossbreeding with other cats e.g. Oriental Shorthair.</p></div>
+				
+			</div>
+			<div class="side-bar" id="image-bar">
+				<div class="animal-pic">
+					<img class="animal-picture" src="//getAddress//" ng-animate-swap="getAddress"/>
+				</div>
+				<div>
+					<p style="font-style: fantasy; color: rgb(65%, 36%, 67%)">//animalName//</p>
+				</div>
+				<div style="width: 100%" ng-bind-html="animalDescription">
+				</div>
+			</div>
+		</div>
+		<div style="margin-top: 15px; float: left; width: 100%; clear: right;">
+			<h4 style="width: 100%; text-align: center;">INTERESTING FACTS AND MYTHS ABOUT CATS</h4>
+			<h5>FACTS</h5>
+			<ol>
+			<li>Cats mostly do not meow at another cat: They use this sound for humans.</li>
+			<li>Cat sweats only on their paws: They do not have sweat glands all over their body like humans. Sweat only through the paws, that a frightened cat can leave a trail of wet footprints on the ground.</li>
+			<li>Cat sees about 6 times better than humans at night: Cats have a superior ability to see in the dark than humans because of the number of rods in their retina that are sensible to dim light.</li>
+			<li>A 15year old cats has probably spent 10years of it life sleeping: Cats can sleep as much as 16hours a day and older cats even spend as much as 20 hours.</li>
+			<li>Human pain killers such as Acetaminophen are toxic to cats.</li>
+			</ol>
+
+
+			<h5>MYTH</h5>
+			<ol>
+			<li>Cats have 9 lives; thus, do not need regular check-up: Cats have only one life, so regular health care and veterinary visit is important to ensure that your cat live a long, healthy and happy life.</li>
+			<li>Black cats are unlucky: Black cats have been subject of myth and folklore for centuries (that feeling you get if a black cat appears at your doorstep!!!). In reality, the only supernatural powers black cats possess are ones of unconditional love and affection, just like any other cat.</li>
+			<li>Cats are unloving, if you want a pet get a dog: Cats do show affection towards their owners and many do like to be stroked and patted</li>
+			<li>Cats are nocturnal: Cats are not nocturnal, they are only most active at dawn and dusk when hunting opportunity are rife and there’s enough light for them to see well.</li>
+			<li>Cats should be feed with milk mostly: Despite the popular belief, cats do not need milk. If they are fed balanced diet, they will get all the nutrients they need. Milk can upset their stomach and make them diarrheic.</li>
+			</ol>
+ 
+			<h5>TIPS TO OWING A CAT</h5>
+			<p>Bringing home a new cat is like adopting a new baby, in this case you will get to shop for a litter box instead.<p>
+			<ol>
+			<li>Decide if you are ready! Are you ready for the financial and emotional commitment that comes with owning a pet?</li>
+			<li>Ask questions: Obtain knowledge about what you are about to start; contact an experienced breeder or preferably a veterinarian.</li>
+			<li>Prepare a safe room for your cat and make a schedule: Provide a fitting and comfortable apartment for the cat, block off any area of the house that’s off-limits, and block access to any house or garden toxic to the cat. Make schedule for feeding, clean up and grooming.</li>
+			<li>Select a veterinarian: Choose a vet ahead of time so you will be ready for a visit as soon as the cat arrives. Set up vaccination and check-up schedule.</li>
+			<li>Bring your new cat home: Allow it to adjust to the new environment; cats are territorial, so change of environment makes them uncomfortable initially. Give your cat a name.</li> 
+			<li>Feed cats’ healthy diet and ensure adequate exercise: All your cat need is not just milk, give balanced diet! (Your cat can also be Obese). Food and water must be always fresh and clean.</li> 
+			<li>Ensure cat is clean at all times: Ensure regular grooming of the cat and proper cleaning of the surroundings. Bath with shampoo occasionally, on sunny days and help it dry up quickly.</li>
+			<li>Schedule regular checkup and embrace disease preventive measures: Schedule regular and routine checkup with your veterinarian. Ensure vaccination and de-worming is up to date. Keep his bedding, and your home free from parasites. Be vigilant and consult your vet in cases of strange observations.</li>
+			</ol>
+
+		</div>
+		<div data-ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>

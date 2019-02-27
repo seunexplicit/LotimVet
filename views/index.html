@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>Lotim Veterinary</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<meta charset="utf-8">
+	<link type="text/css" media="screen and (min-width: 650px)" href="/css/index.css" rel="stylesheet">
+	<link type="text/css" media="screen and (max-width: 649px)" href="/css/indexL650.css" rel="stylesheet">	
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/js/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/index.js"></script>
+</head>
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body ng-app="myApp" ng-controller="lotimController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="images/DesignedName3.png"/></div>
+		<div class="main-content">
+			<div class="sub-side-bar" id="major-column">
+				<div style="width: 100%">
+					<div class="clicked-div"><div style="height:22px"><img class="clicked-image" src="//clickedButton//" ng-click="showMenu(2)"></div>
+				<div id="list-div" ng-show="showmenu==true">
+					<div class="menu-list"><a href="/" target="_self">&nbsp Home &nbsp&nbsp</a></div>
+					<div class="menu-list"><a href="/askAVet" target="_self">&nbsp Ask a Vet &nbsp&nbsp</a></div>
+					<div class="menu-list"><a href="/article" target="_self">&nbsp Article &nbsp&nbsp</a></div>
+					<div class="menu-list" id="last-span" ng-mouseenter="animalshow=true" ng-mouseleave="animalshow=false"><div class="animal-popup">&nbsp Animal Menu &nbsp</div><div class="popup" ng-show="animalshow"><p class="sub-menu"><a href="/dog" target="_self">Dog</a></p><p class="sub-menu">Cat</p><p class="sub-menu">Dog</a></p><p class="sub-menu"><a href="/cat" target="_self">Cat</a></p><p class="sub-menu"><a href="/pig" target="_self">Pig</a></p><p class="sub-menu"><a href="/cattle" target="_self">Cattle</a></p><p class="sub-menu"><a href="/sheep" target="_self">Sheep</a></p><p class="sub-menu"><a href="/goat" target="_self">Goat</a></p><p class="sub-menu"><a href="/poultry" target="_self">Poultry</a></p></div></div>
+				</div>
+			</div>
+				<div id="list-div1">
+					<div class="menu-list"><a href="/" target="_self">&nbsp Home &nbsp&nbsp</a></div>
+					<div class="menu-list"><a href="/askAVet" target="_self">&nbsp Ask a Vet &nbsp&nbsp</a></div>
+					<div class="menu-list"><a href="/article" target="_self">&nbsp Article &nbsp&nbsp</a></div>
+					<div class="menu-list" id="last-span" ng-mouseenter="animalshow=true" ng-mouseleave="animalshow=false"><div class="animal-popup">&nbsp Animal Menu &nbsp</div><div class="popup" ng-show="animalshow"><p class="sub-menu"><a href="/dog" target="_self">Dog</a></p><p class="sub-menu"><a href="/cat" target="_self">Cat</a></p><p class="sub-menu"><a href="/pig" target="_self">Pig</a></p><p class="sub-menu"><a href="/cattle" target="_self">Cattle</a></p><p class="sub-menu"><a href="/sheep" target="_self">Sheep</a></p><p class="sub-menu"><a href="/goat" target="_self">Goat</a></p><p class="sub-menu"><a href="/poultry" target="_self">Poultry</a></p></div></div>
+				</div>
+				<div style="clear: both; padding-top: 2%;  padding-left:20%;float: center;"><input type="text" id="main-search" ng-model="searchItem.item"/>
+					<div ng-if="searchItem.item.length>0" id="search-item-div">
+						<ul id="search-item-ul">
+							<li ng-repeat="item in searchContent | filter:searchItem| limitTo:6" ng-click="findItem(item.No)" id="search-item-li">//item.item//</li>
+						</ul>
+					</div>
+				</div>
+				</div>
+				<div class="sub-main-content">
+					<div class="floating-bg" style="background-image: url(//pic_url//);"  ng-animate-swap="pic_url">
+						<p class = "moving-text" ng-class="bgd" ng-bind-html="captions"></p><p class="read-article-1" ng-class="bgd+'-article'" ng-click="relocateArticle()">Read Article</p>
+					</div>
+					<div>
+						<h2> Sub Articles</h2>
+						<div class="article-class" id="first-article-class"><h3>Owning Poultry</h3>
+						<p><img class="intro" src="/images/hen4.png" alt="poultry hen"/>Poultry is quite a lucrative business, but not with it's hurdles, a proper planning have to be carried before going into a poultry business, which include Financial Planning, Feasibility planning, Maintenance Planning <a href="/">read more...</a></p></div>
+						<div class="article-class"><h3>Pig Rearing</h3>
+						<p><img class="intro" src="/images/pig3.png" alt="pig">Pig farming is growing popular on a daily basis in Nigeria, as Nigeria economy is revolving to promote the growth of agriculture in the country. This farming is a very lucrative business, that is fast gaining attention in Nigeria, this <a href="/">pig article</a> give a brief description of what it takes to start a succesful poultry farming</p></div>
+						<div class="article-class" id="last-article-class"><h3>Starting a Livestock Business</h3>
+						<p><img class="intro" src="/images/cow.png" alt="livestock, image of a cow">This article gives you some simple, yet powerful tips, that would help you to start a livestock business. livestock farming could be rearing of goats, sheeps, cows, rabbits or combination of any of them. Livestock rearing are very profitable and the market for it is always present as there is few or no place in Nigeria where their meat is not being consume <a href="/">read more..</a></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="sub-side-bar" id="minor-column" ng-show="showMinorColumn==true">
+				<p>U welcome to our page</p>
+			</div>
+			<div class="sub-side-bar" id="minor-column1">
+				<p>U welcome to our page</p>
+			</div>
+		</div>
+		<div class="sub-side-bar" id="minor-column">
+				<p>U welcome to our page</p>
+		</div>
+		<div class="footer">
+			<div id="Short-note"><div class="Short-note1" ng-class="bgd+'-note'" ng-animate-swap="bgd"><i><b>//shortNote//</b></i></div>
+			</div>
+			<div id="Contact-div">
+				<h4 style="color: rgb(57%, 30%, 63%);">Contact Us</h4>
+				<div style="margin-bottom: 5px;"><img class="link-logo" id="phone-logo" src="/images/phone call.png"><div>+234-815-063-7434, &nbsp&nbsp +234-708-175-2782</div></div>
+				<div style="float: left; clear: both;"><a href="mailto:lotimvetservice@gmail.com"><img class="link-logo" id="gmail-logo" src="/images/Gmail.png"><span>lotimvetservice@gmail.com</span></a></div>
+				<div id="external-link"><div id="facebook-logo-div"><a href="https://www.facebook.com/lotimvetservices"><img class="link-logo" id="facebook-logo" src="/images/Facebook.png"></a></div><div id="instagram-logo-div"><img id="instagram-logo" class="link-logo" src="/simages/instagram.png"></div><div id="twitter-logo-div"><a href="https://www.twitter.com/lotimvetservic1"><img id="twitter-logo" class="link-logo" src="/images/Twitter.png"></a></div></div>
+			</div>
+		</div>
+	</div>
+	<a href="/askAVet" target="_self"><img src="images/comment-tag.png" id="comment-tag"></a>
+</body>
+</html>

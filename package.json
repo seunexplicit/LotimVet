@@ -1,0 +1,31 @@
+{
+  "name": "LotimVet",
+  "version": "1.0.0",
+  "main":"server.js",
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "latest",
+    "body-parser": "latest",
+    "consolidate": "latest",
+    "swig": "latest"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start":"node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seunexplicit/LotimVet.git"
+  },
+  "keywords": [
+		"angularjs",
+		"nodejs"
+	],
+  "author": "seunexplicit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seunexplicit/LotimVet/issues"
+  },
+  "homepage": "https://github.com/seunexplicit/LotimVet#readme"
+}

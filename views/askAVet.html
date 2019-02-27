@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Ask A Vet</title>
+</head>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="js/angular-animate.min.js"></script>
+<script type="text/javascript" src="js/angular-cookies.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="css/askAVet.css">
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body data-ng-app="myApp" ng-controller="questionController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="images/DesignedName3.png"/></div>
+		<div id="list-div">
+					<div class="menu-list"><a href="/" target="_self">&nbsp Home &nbsp&nbsp</a></div>
+					<div class="menu-list"><a href="/askAVet" target="_self">&nbsp Ask a Vet &nbsp&nbsp</a></div>
+					<div class="menu-list"><a href="/article" target="_self">&nbsp Article &nbsp&nbsp</a></div>
+					<div class="menu-list" id="last-span" ng-mouseenter="animalshow=true" ng-mouseleave="animalshow=false"><div class="animal-popup">&nbsp Animal Menu &nbsp</div><div class="popup" ng-show="animalshow"><p class="sub-menu"><a href="/dog" target="_self">Dog</a></p><p class="sub-menu"><a href="/cat" target="_self">Cat</a></p><p class="sub-menu"><a href="/pig" target="_self">Pig</a></p><p class="sub-menu"><a href="/cattle" target="_self">Cattle</a></p><p class="sub-menu"><a href="/sheep" target="_self">Sheep</a></p><p class="sub-menu"><a href="/goat" target="_self">Goat</a></p><p class="sub-menu"><a href="/poultry" target="_self">Poultry</a></p></div></div>
+		</div>
+		<div style="clear:right;">
+			<div>
+				<p class="element-spacing">Note: Response to your question will be sent to your Mail Address</p>
+				<p class="element-spacing" ng-class="allowUser+''">Warning: //vMessage//</p>
+			</div>
+			<div data-ng-controller="questionController">
+				<form>
+					<div class="input-div"><label class="form-label">Name: </label><input class="input" type="text" title="Your Name" placeholder="please enter your name" data-ng-model='name' ng-disabled="!allowUser"/></div>
+					<div class="input-div"><label class="form-label">Email: </label><input class="input" type="email" title="Your Email Address" placeholder="please enter your email" data-ng-model='emailAdress' ng-disabled="!allowUser" required/></div>
+					<div><p class="form-label">Question</p>
+					<textarea data-ng-model='question' ng-disabled="!allowUser" required></textarea></div>
+					<div><input class="element-spacing" type="submit" value="Ask" ng-disabled="!allowUser" ng-click="sendQuestion(name,emailAdress,question)"></div> 
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

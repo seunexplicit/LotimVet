@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="admin.js"></script>
+</head>
+<body ng-app="adminApp">
+	<div>
+		<div>
+			<div class="page-header"><img id="design-name" src="images/DesignedName3.png"/></div>
+		</div>
+		<div class="main-content" ng-controller="adminController">
+			<div class='sub-side-bar' id="minor-column1">
+			<div class="article-span-title"  ng-click="displayedContent='message_window.html'">	
+				<p class="span-title">Messages</p>
+			</div>
+			<div class="article-span-title"  ng-click="displayedContent='article_window.html'">
+				<p class="span-title">Articles</p>
+			</div>
+			</div>
+			<div class='sub-side-bar' data-ng-include="displayedContent" id="major-column"></div>
+		</div>
+	</div>
+</body>
+</html>

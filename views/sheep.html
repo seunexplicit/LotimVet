@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sheeps</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
+	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/animal_list.js"></script>
+	<meta charset="utf-8">
+</head>
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body ng-app="myApp" ng-controller="sheepController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+		<div data-ng-include="'menu.html'"></div>
+		<div><h3>SHEEP BREEDS (Commonly found in Nigeria)</h3></div>
+		<div style="float: left; clear: right;">
+			<div class="side-bar" id="list-of-breed"> 
+				<div class="lists" ng-click="getPicture('Balami')" id="balami"><h4>BALAMI</h4>
+				<p>Balami is the largest bodied native sheep in Nigeria. As a pastoral animal, it is confned to the semi-arid north but it is favoured as a stall fed breed by Muslims throughout the Nigerian middle belt. It is white and hairy with pendulous ears, long leg and a long thin tail. Rams are horned but ewes are normally polled (hornless). Another feature that makes the Balami distinctly recognisable is its Roman, bulbous nose that distinguishes it from the Yankasa. It has good potential as a meat producer.</p></div>
+
+				<div class="lists" ng-click="getPicture('Yankasa')" id="yankasa"><h4>YANKASA</h4>
+				<p>Yankasa is a meat breed found in North and North central Nigeria. The Yankasa is a medium sized breed of sheep. The tail is long and thin, the ears moderately long and somewhat droopy. Rams have curved horns and a hairy white mane and ewes are polled (hornless). They have white coat colour with black patches around the eyes, ears and muzzle.</p></div>
+
+				<div class="lists" ng-click="getPicture('Uda')" id="uda-sheep"><h4>UDA</h4>
+				<p>The Uda is also known as Bororo is found in Northern Nigeria, Southern Niger, central Chad, Northern Cameroon and Western Sudan. It is one of the hair sheep breeds of the Sahel type. It is also a meat breed. It is a long legged breed of sheep with distinctive coat colour of brown or black anterior and white posterior. They are large with straight and long face. The rams of the Uda are horned and the ewes are usually polled (hornless). </p></div>
+
+				<div class="lists" ng-click="getPicture('West African Dwarf')" id="west-african-dwarf"><h4>WEST AFRICAN DWARF</h4>
+				<p>The West African Dwarf is a dominant breed from southwest to central Africa. It is a small bodied, compact breed which may be all white, black, brown or spotted black or brown on a white coat. They have a well-developed throat ruff and are horned. They can be bred at the age of 7 to 8 months. They tend to have a short lambing interval. This breed is also trypanotolerant (tolerant to trypanosomiasis disease).</p></div>
+			</div>
+			<div class="side-bar" id="image-bar">
+				<div class="animal-pic">
+					<img class="animal-picture" src="//getAddress//" ng-animate-swap="getAddress"/>
+				</div>
+				<div>
+					<p style="font-style: fantasy; color: rgb(65%, 36%, 67%)">//animalName//</p>
+				</div>
+				<div style="width: 100%" ng-bind-html="animalDescription">
+				</div>
+			</div>
+		</div>
+		<div data-ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>

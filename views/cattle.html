@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cattle Breeds</title>
+	<link rel="icon" type="image/png" href="/images/vet Logo.png">
+	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
+	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/animal_list.js"></script>
+	<meta charset="utf-8">
+</head>
+<noscript>
+	<style type="text/css">
+		.page-div{
+			display:none;
+		}
+	</style>
+	<div style="margin: 15% 0% 0% 35%">
+		<div style="width: 30%; background-color: rgb(70%, 70%, 70%); padding: 5px; border-radius: 5%">sorry this site require javascript in your browser to be turn-on, please turn-on javascript to conitnue using this site</div>
+	</div>
+</noscript>
+<body ng-app="myApp" ng-controller="cattleController">
+	<div class="page-div">
+		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+		<div data-ng-include="'menu.html'"></div>
+		<div><h3>CATTLE BREEDS (Commonly found in Nigeria)</h3></div>
+		<div style="float: left; clear: right;">
+			<div class="side-bar" id="list-of-breed"> 
+				<div class="lists" ng-click="getPicture('Adamawa Gudali')" id="adamawa-gudali"><h4>ADAMAWA GUDALI</h4>
+				<p>The Adamawa Gudali, as its name implies, is restricted to Adamawa State, Nigeria. The Nigerian National Livestock Research Survey (NNLRS) estimated that it represents 2% of the national herd. It is medium to large sized, with medium-length horns and usually pied, or with a white, black, red or brown coat. It has thick, crescent-shaped horns, a pendulous hump, and a short head and muzzle. They are a multipurpose breed, used as a draught animal, and for beef and dairy production.</p></div>
+
+				<div class="lists" ng-click="getPicture('Keteku')" id="keteku-cattle"><h4>KETEKU</h4>
+				<p>Keteku in Nigeria, are significantly less common with varying distribution (Kwara, Oyo, Niger and Ondo States). White, grey and black coloured type are predominant, and more occasionally red and brown. The horns are long, smaller hump, and short legs.</p></div>
+
+				<div class="lists" ng-click="getPicture('Kuri')" id="kuri-cattle"><h4>KURI</h4>
+				<p>The Kuri is a breed of the hump-less longhorn group of cattle. They are used for meat, milk and work. They are intolerant of heat, sunlight, and cannot stand long periods of drought. They are good swimmers and spend much of their time in Lake Chad. The Kuri has distinctive, inflated, spongy horns with a mean height of 1.5. Kuri are noted for their extremely variable colors and their ability to thrive in semi aquatic conditions</p></div>
+
+				<div class="lists" ng-click="getPicture('Ndama')" id="ndama-cattle"><h4>N’DAMA</h4>
+				<p>N’dama cattle are native to Senegambia and adjacent parts in the West of West Africa. N’dama has a medium-sized compact body with lyre-shaped black-tipped horns and no hump. They are known to be trypanotolerant and are used for both meat and milk production.</p></div>
+
+				<div class="lists" ng-click="getPicture('Red Bororo')" id="red-bororo"><h4>RED BORORO</h4>
+				<p>The Red Bororo is the third most numerous breed of cattle in Nigeria, The Nigerian National Livestock Research Survey (NNLRS) estimated that it represents 22% of the national herd. They are from Mali across Niger and northern Nigeria to Chad and Cameroon. They are reddish-brown in colour with long lyre shaped horns. They are able to with-stand heat, ticks, insect bites and scarcity of water and feed. The breed is used for milk and meat production.
+				</p></div>
+				<div class="lists" ng-click="getPicture('Sokoto Gudali')" id="sokoto-gudali"><h4>SOKOTO GUDALI</h4>
+				<p>The Nigerian National Livestock Research Survey (NNLRS) estimated that, Gudali represents 32% of the national herd. It is distributed widely throughout the country The Sokoto Gudali is a uniform cream, light grey or dun, the dewlap and skin folds are highly developed, they have big hump and the horns almost absent. The hair is short and the skin is thick and pigmented. The ears are pendulous and are useful milkers.</p></div>
+				<div class="lists" ng-click="getPicture('White Fulani')" id="white-fulani"><h4>WHITE FULANI</h4>
+				<p>White Fulani is the most numerous and widespread of all Nigerian cattle breeds. The Nigerian National Livestock Research Survey (NNLRS) estimated that, it represents 37% of the national herd. They are widespread across the country. It has white coat color, fairly-large hump, navel flab is small, horns are of medium length, up curving, and lyre shaped. It may be fattened for beef, kept for milk production, or used as draught animal, especially the bull.</p></div>
+				
+			</div>
+			<div class="side-bar" id="image-bar">
+				<div class="animal-pic">
+					<img class="animal-picture" src="//getAddress//" ng-animate-swap="getAddress"/>
+				</div>
+				<div>
+					<p style="font-style: fantasy; color: rgb(65%, 36%, 67%)">//animalName//</p>
+				</div>
+				<div style="width: 100%" ng-bind-html="animalDescription">
+				</div>
+			</div>
+		</div>
+		<div data-ng-include="'footer.html'"></div>
+	</div>
+</body>
+</html>
