@@ -1,0 +1,52 @@
+<div data-ng-controller="articleController">
+<div style="width: 100%; float: left; clear:both;">
+	<img src="/images/backward-arrow.png" style="float: left; margin-left: 10px" ng-click="clickArrow('backward')">
+	<img src="/images/forward-arrow.png" style="float: right; margin-right: 10px" ng-click="clickArrow('forward')">
+</div>
+<h1 class="admin-header">Article</h1>
+<input type="submit" value="Compose Article" data-ng-click="showInput=!showInput">
+<div data-ng-show="showInput==true">
+	<p><label>Title</label><br/><input type="text" title="Ariticle Title" data-ng-model="articleTitle"></p>
+	<p><label>Article</label><br/><textarea data-ng-model="articleText"></textarea></p>
+	<p><label>Author</label><br/><input type="text" title="Article Author" data-ng-model="articleAuthor"></p>
+	<p><label>Reference</label><br/><input type="text" title="References to Article" data-ng-model="articleRef"></p>
+	<input type="button" value="Post Article" data-ng-click="articlePost(articleTitle, articleText, articleAuthor, articleRef)">
+</div>
+<div data-ng-show="showEdit">
+<p><label>Title</label><br/><input type="text" title="Ariticle Title" data-ng-model="article.title"></p>
+	<p><label>Article</label><br/><textarea data-ng-model="article.text"></textarea></p>
+	<p><label>Author</label><br/><input type="text" title="Article Author" data-ng-model="article.author"></p>
+	<p><label>Reference</label><br/><input type="text" title="References to Article" data-ng-model="article.reference"></p>
+	<input type="submit" value="Make Changes" data-ng-click="editArticle()">
+	<input type="submit" value="Cancel" data-ng-click="cancelEdit()">
+</div>
+
+<div data-ng-show="showArticles">
+	<br/>
+	<span data-ng-repeat="a in articles">
+		<div data-ng-click="getArticle(a._id)" class="messages">
+			<div id="message-question-comment" style="color: rgb(50%,50%, 85%)"><span>//a.title//</span></div>
+			<div id="message-name-email"><span style="font-size: 80%; color: rgb(70%,70%, 85%)">//a.date//</span>
+			<span>&nbsp&nbsp&nbsp//a.comments.length//</span></div>
+		</div>
+	</span>
+</div>
+<div data-ng-show="showArticle">
+	<div id="article">
+				<h3 style="text-align: center; text-transform: uppercase; text-shadow: -2px -2px 2px #cccccc">//article.title//</h3>
+				<p style="margin-bottom: 10px;"><span class="span-name">written by: <span style="text-transform: uppercase;">//article.author//</span> </span><span class="span-date"> &nbsp&nbsp Date: //article.date//</span></p>
+				<div class="div-article-text"><span ng-bind-html="article.text" class="span-article-text"></span></div>
+				<div style="float:left; clear:left;"><span>Reference(s): //article.reference//</span></div>
+				<div style="float:left; clear:both; width: 100%; margin-top: 2%">
+					<input type="submit" value="Edit" data-ng-click="makeEdit()">
+					<input type="submit" value="Delete" data-ng-click="deleteArticle()">
+				</div>
+	</div>
+	<div id="comments">
+		<div ng-repeat="comment in article.comments" class="each-comment">
+				<p style=""><span class="span-name"><i>//comment.name//</i></span><span class="span-date"><i>//comment.date//</i></span></p>
+				<span class="comment-text">//comment.text//</span>
+		</div>
+	</div>
+</div>
+</div>
