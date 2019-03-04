@@ -1,6 +1,6 @@
 .page-header{
 	width: 100%;
-	height: 150px;
+	height: 200px;
 	background-color: #000020;
 	padding-left: 5%;
 	padding-bottom: 1%
@@ -111,7 +111,7 @@ div#last-span{
 }
 .popup{
 	position:absolute;
-	width:105px;
+	width:300px;
 	padding-left:2px;
 	text-align:left;
 	background-color:rgba(80%, 80%, 87%, 0.7);
@@ -125,10 +125,10 @@ div#last-span{
 	font-size:170%;
 }
 .about{
-	 font-size:18px;
+	 font-size:200%;
 }
 .sub-article{
-	font-size:200%;
+	font-size:250%;
 }
 
 input#main-search{
@@ -140,10 +140,10 @@ input#main-search{
 	border: 1px solid rgb(90%, 90%, 90%);
 	padding-left: 3.5%;
 	padding-right: 0.5%;
-	font-size: 100%;
+	font-size: 170%;
 	width: 60%;
 	min-width:200px;
-	height:100px;
+	height:50px;
 	margin: 0% 0% 3% 2%;
 	-webkit-box-shadow: -2px 2px 2px #aaaaaa;
 	box-shadow: -2px 2px 2px #aaaaaa;
@@ -274,7 +274,7 @@ img#comment-tag{
 	top: 85%;
 	cursor: pointer;
 	left: 80%;
-	width: 200px
+	width: 250px
 	height: 180px;
 }
 img.intro{
