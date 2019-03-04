@@ -102,6 +102,7 @@ div#last-span{
 	-webkit-border-radius:5%;
 	-moz-border-radius:5%;
 	-o-border-radius:5%;
+	z-index:10;
 }
 .sub-menu{
 	color:#222222;

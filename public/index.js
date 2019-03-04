@@ -36,10 +36,10 @@
  	{ item:"Keteku", link:"/cattle/#keteku-cattle", No:28},
  	{ item:"Great Dane", link:"/dog/#great-dane", No:29},
  	{ item:"Kuri", link:"/cattle/#kuri-cattle", No:30},
- 	{ item:"Zoonosis", link:"/article/?q=5c6b15a50a998f2200e9e15a", No:31},
+ 	{ item:"Zoonosis", link:"/article/?q=5c7cfab07422c30017845ca3", No:31},
  	{ item:"Lhasa Apso", link:"/dog/#lhasa-apso", No:32},
  	{ item:"Ndama", link:"/cattle/#ndama-cattle", No:33},
- 	{ item:"Vaccination", link:"/article/?q=5c6b315e0a998f2200e9e1b6", No:34},
+ 	{ item:"Vaccination", link:"/article/?q=5c7cfb367422c30017845ca4", No:34},
  	{ item:"Neopolitan Mastiff", link:"/dog/#neopolitan-mastiff", No:35},
  	{ item:"Red Bororo", link:"/cattle/#red-bororo", No:36},
  	{ item:"Pitbull", link:"/dog/#pitbull-dog", No:37},
@@ -64,7 +64,10 @@
  	{ item:"Ragdoll cat", link:"/cat/#ragdoll-cat", No:56},
  	{ item:"Siamese", link:"/cat/#siamese-cat", No:57},
  	{ item:"Rottweiler", link:"/dog/#rottweiler-dog", No:58},
- 	{ item:"Yorkshire", link:"/pig/#yorkshire", No:59}
+ 	{ item:"Yorkshire", link:"/pig/#yorkshire", No:59},
+ 	{ item:"Livestock Farming", link:"/article/?q=5c7cfba97422c30017845ca5", No:60},
+ 	{ item:"Pig Rearing", link:"/article/?q=5c7d5f6f10d90b001728f420", No:61}
+ 	{ item:"Poultry Farming", link:"/article/?q=5c7d5b3810d90b001728f41f", No:662}
  	];
 
  	$scope.findItem = function(num){
@@ -76,21 +79,21 @@
  		pic_url: 'images/cat-on-lap2.png',
  		captions: '<i>Cat are so Lovely<br/>Why You should <br/>Own a Cat</i>',
  		ngclass:'background1',
- 		articleAddress:'?q=article4h5jkhgj167afjjhjh',
+ 		articleAddress:'?q=5c7d654210d90b001728f421',
  		shortNote:'Lotim takes your pet health seriously'
  	},
  	{
  		pic_url:'images/zoonosis.jpg',
  		captions: '<i>Zoonosis<br/>A Major Threat<br/>To Human Health</i>',
  		ngclass:'background2',
- 		articleAddress:'?q=5c6b15a50a998f2200e9e15a',
+ 		articleAddress:'?q=5c7cfab07422c30017845ca3',
  		shortNote:'You Matters, We Matters, Your Animals Matters'
  	},
  	{
  		pic_url:'images/vaccine.jpg',
  		captions: '<i>Protect Humanity and Animal likewise<br/>by keeping up with<br/>Animal vaccination</i>',
  		ngclass:'background3',
- 		articleAddress:'?q=5c6b315e0a998f2200e9e1b6',
+ 		articleAddress:'?q=5c7cfb367422c30017845ca4',
  		shortNote:'Make Lotim Your choice vet hub as we build a safe environment for you and your animal'
  	},
  	];
@@ -313,9 +316,7 @@ lotim.controller('articleController', ['$scope', '$http','$window', '$cookies', 
 	.then(
 	function(response){
 		$scope.articles = response.data;
-		for(var j=0; j<$scope.articles.length; j++){
-				console.log($scope.articles[j]._id+"->-"+$scope.articles[j].title);
-		}
+
 		var index = $cookies.get('index');
 			if(index==undefined){
 				var len = $scope.articles.length;
@@ -341,6 +342,9 @@ lotim.controller('articleController', ['$scope', '$http','$window', '$cookies', 
 		.then(
 		function(response){
 			$scope.article = response.data;
+			if(!$scope.article){
+				$scope.article.text = "<span style='font-size:200%'><b>Error Getting Article</b></span>";
+			}
 			$scope.article.text = $sce.trustAsHtml($scope.article.text);
 			$scope.comments = $scope.article.comments;
 		},
