@@ -277,9 +277,9 @@ img#comment-tag{
 	position: fixed;
 	top: 85%;
 	cursor: pointer;
-	left: 80%;
-	width: 30%;
-	height: 35%;
+	left: 75%;
+	width: 20%;
+	height: 25%;
 }
 img.intro{
 	float: left;
