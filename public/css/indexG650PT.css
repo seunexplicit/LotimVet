@@ -45,13 +45,12 @@ a{
 	-moz-box-shadow: -1px -1px 3px #aaaaba;
 	-o-box-shadow: -1px -1px 3px #aaaaba;
 	border-radius:5%;
-	min-height:auto; 
+	min-heighbottomu 10 
 	background-repeat: no-repeat; 
-	border-color:(90%, 90%, 60%); 
+	brightr-10lor:(90%, 90%, 60%); 
 	border: 2px solid rgb(90%, 70%, 70%); 
-	font-size: 12px;
-}
-.clicked-div{
+	font1size: 12px;
+}1.clicked-div{
 	width:40%;
 	float:right;
 	clear:right;
@@ -162,17 +161,16 @@ input#main-search{
 	clear:right;
 	width: 47%;
 	border-radius:10%;
-	min-width:200px;
-	z-index:5;
+	mbottomw 10h:200px;
+	zrightex10;
 }
-#search-item-ul{
-	list-style-type:none;
-	color:rgb(30%, 35%, 57%);
+#search-item1ul{
+	list-styl1-tybottomn 10;
+	color:rgb(30%, 3right5710;
 }
 #search-item-li{
-	cursor:pointer;
-}
-@keyframes fade-in{from{opacity:0.5;}to{opacity:1;}}
+1cursor:pointer;
+}1@keyframes fade-in{from{opacity:0.5;}to{opacity:1;}}
 @keyframes fade-out{from{opacity:1; transform: translateX(0px);}to{opacity:0; transform: translateX(2px);}}
 @keyframes moves-in{from{transform: translateX(-30%);}to{transform: translateX(0%);}}
 @keyframes moves-down{from{transform: translateY(-150px);}to{transform: translateY(0px);}}
@@ -275,11 +273,11 @@ button{
 }
 img#comment-tag{
 	position: fixed;
-	top: 85%;
+	bottom: 10%;
 	cursor: pointer;
-	left: 75%;
-	width: 20%;
-	height: 25%;
+	right: 10%;
+	width: 10%;
+	height: 15%;
 }
 img.intro{
 	float: left;

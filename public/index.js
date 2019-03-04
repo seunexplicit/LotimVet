@@ -342,7 +342,7 @@ lotim.controller('articleController', ['$scope', '$http','$window', '$cookies', 
 		.then(
 		function(response){
 			$scope.article = response.data;
-			if(!$scope.article){
+			if(!$scope.article.text){
 				$scope.article.text = "<span style='font-size:200%'><b>Error Getting Article</b></span>";
 			}
 			$scope.article.text = $sce.trustAsHtml($scope.article.text);
