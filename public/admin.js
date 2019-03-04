@@ -128,6 +128,7 @@ admin.controller('messageController', ['$scope', '$http', '$window', function($s
 	}
 
 	$scope.setAnswer = function(reply, questionID){
+		var j;
 		var answer = {
 			texts: reply,
 			date: new Date()
@@ -135,13 +136,15 @@ admin.controller('messageController', ['$scope', '$http', '$window', function($s
 		for(var i = 0; i<$scope.ques.length; i++){
 			if($scope.ques[i]._id==questionID){
 				$scope.ques[i].answer = answer;
+				j = i;
 				$scope.ques[i].question.viewed = 'view';
 			}
 		}
 		$http.post('/answer/675775677/KloYhYYj/',{
 			email:$scope.message.email,
-			updateAnswer:$scope.ques
-		}).then(function(response){console.log(response.data)}, function(response){console.log(response.data)});
+			updateAnswer:$scope.ques,
+			questID:j
+		}).then(function(response){$window.alert("Response sent!")}, function(response){$window.alert("an Error just occur")});
 
 	}
 

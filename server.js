@@ -4,7 +4,7 @@ var express = require('express'),
 	cons = require('consolidate');
 
 var app = express();
-var db = mongoose.connect('mongodb://127.0.0.1:27017/lotimVet');
+var db = mongoose.connect('mongodb://heroku_2gh8wx5w:ul4v78pfas1a7dbdthffqgohnu@ds159025.mlab.com:59025/heroku_2gh8wx5w');
 app.use(bodyparser.json(), bodyparser.urlencoded());
 app.use(bodyparser.text());
 
