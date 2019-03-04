@@ -122,9 +122,13 @@ div#last-span{
 }
 .sub-menu{
 	color:#222222;
+	font-size:170%;
 }
-span{
-	 
+.about{
+	 font-size:18px;
+}
+.sub-article{
+	font-size:200%;
 }
 
 input#main-search{
@@ -139,7 +143,7 @@ input#main-search{
 	font-size: 100%;
 	width: 60%;
 	min-width:200px;
-	max-height: 33px;
+	height:100px;
 	margin: 0% 0% 3% 2%;
 	-webkit-box-shadow: -2px 2px 2px #aaaaaa;
 	box-shadow: -2px 2px 2px #aaaaaa;
@@ -270,8 +274,8 @@ img#comment-tag{
 	top: 85%;
 	cursor: pointer;
 	left: 80%;
-	width: 100px
-	height: 100px;
+	width: 200px
+	height: 180px;
 }
 img.intro{
 	float: left;
@@ -318,7 +322,7 @@ div.article-class:hover{
 }
 #phone-logo, #gmail-logo{
 	height:30px;
-	width:30px;
+	width:35px;
 	margin-right:15px;
 	float:left;
 	clear:both;
@@ -372,7 +376,7 @@ div.article-class:hover{
 	color:rgb(40%, 10%, 45%);
 	float:left;
 	clear:right;
-	width:130px;
+	width:250px;
 	font-size:100%;	
 }
 #Short-note{
