@@ -314,7 +314,7 @@ lotim.controller('articleController', ['$scope', '$http','$window', '$cookies', 
 	function(response){
 		$scope.articles = response.data;
 		for(var j=0; j<$scope.articles.length; j++){
-				console.log($scope.articles[j]._id+"->-"$scope.articles[j].title);
+				console.log($scope.articles[j]._id+"->-"+$scope.articles[j].title);
 		}
 		var index = $cookies.get('index');
 			if(index==undefined){
