@@ -211,13 +211,17 @@ input#main-search:hover{
 }
 .background1{
 	animation: 3s moves-in;
+	font-size:250%;
+	mix-blend-mode:difference;
 }
 .background2{
-	color:rgb(65%, 35%, 40%);
+	color:rgb(0%, 100%, 0%);
+	mix-blend-mode:normal;
 	animation: 3s moves-in;
 }
 .background3{
-	color:rgb(55%, 65%, 30%);
+	mix-blend-mode:exclusion;
+	font-size:200%;
 	animation: 3s moves-in;
 }
 button{ 

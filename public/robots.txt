@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /css/
+Disallow: /images/
+Disallow: /js/
+Disallow: /admin/
+Disallow: /animal_list
+Disallow: /index
+Disallow: /userQuestion

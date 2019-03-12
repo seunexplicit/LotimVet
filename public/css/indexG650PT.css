@@ -85,9 +85,9 @@ div#list-div1{
 }
 .menu-list{
 	display:inline;
-	font-size: 90%;
+	font-size: 150%;
 	float: left;
-	width:100px;
+	width:100%;
 	clear:both;
 	color:rgb(45%, 45%, 65%);
 	border-bottom: 1px solid #c6c6f6;
@@ -217,13 +217,16 @@ input#main-search:hover{
 }
 .background1{
 	animation: 3s moves-in;
+	mix-blend-mode:difference;
 }
 .background2{
-	color:rgb(65%, 35%, 40%);
+	color:rgb(0%, 100%, 0%);
+	mix-blend-mode:normal;
 	animation: 3s moves-in;
 }
 .background3{
-	color:rgb(55%, 65%, 30%);
+	mix-blend-mode:exclusion;
+	font-size:270%;
 	animation: 3s moves-in;
 }
 button{ 
@@ -279,7 +282,7 @@ img#comment-tag{
 	cursor: pointer;
 	right: 7%;
 	width: 10%;
-	height: 10%;
+	height: 8%;
 }
 img.intro{
 	float: left;
@@ -303,6 +306,7 @@ div.article-class{
 	padding: 2px 2px 2px 2px;
 	margin: 1% 1% 1% 1%;
 	width: 90%;
+	line-height:1.4;
 	border: 1.3px solid #cccccc;
 	border-radius: 4%;
 	clear: both;

@@ -196,15 +196,17 @@ input#main-search:hover{
 }
 .background1{
 	animation: 3s moves-in;
+	mix-blend-mode:difference;
 	padding: 10% 5% 2% 5%;
 }
 .background2{
-	color:rgb(65%, 35%, 40%);
+	color:rgb(0%, 100%, 0%);
+	mix-blend-mode:normal;
 	padding: 5% 5% 2% 3%;
 	animation: 3s moves-in;
 }
 .background3{
-	color:rgb(55%, 65%, 30%);
+	mix-blend-mode:exclusion;
 	font-size:270%;
 	padding: 2% 3% 2% 5%;
 	animation: 3s moves-in;
