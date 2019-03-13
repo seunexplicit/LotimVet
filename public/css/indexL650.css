@@ -72,10 +72,10 @@ a{
 }
 div#list-div{
 	position:absolute;
-	background-color:rgba(55%, 55%, 55%, 0.9);
+	background-color:rgb(55%, 55%, 55%);
 	right:1%;
 	border-radius:10%;
-	width: 120px;
+	width: 35%;
 	margin-bottom: 1%;
 	margin-right: 1%;
 	margin-top: 2%
@@ -85,11 +85,11 @@ div#list-div1{
 }
 .menu-list{
 	display:inline;
-	font-size: 90%;
+	font-size: 110%;
 	float: left;
-	width:100px;
+	width:100%;
 	clear:both;
-	color:rgb(45%, 45%, 65%);
+	color:rgb(35%, 35%, 75%);
 	border-bottom: 1px solid #c6c6f6;
 	text-align: center;
 	margin: 1%;
@@ -111,10 +111,10 @@ div#last-span{
 }
 .popup{
 	position:absolute;
-	width:105px;
+	width:100%;
 	padding-left:2px;
 	text-align:left;
-	background-color:rgba(80%, 80%, 87%, 0.7);
+	background-color:rgb(80%, 80%, 87%);
 	border-radius: 5%;
 	-webkit-border-radius:5%;
 	-moz-border-radius:5%;
@@ -298,8 +298,9 @@ p{
 div.article-class{
 	display: inline;
 	float: right;
+	line-height:1.5;
 	padding: 2px 2px 2px 2px;
-	margin: 1% 1% 1% 1%;
+	margin: 1% 1% 4% 1%;
 	width: 90%;
 	border: 1.3px solid #cccccc;
 	border-radius: 4%;

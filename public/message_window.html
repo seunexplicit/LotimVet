@@ -8,7 +8,7 @@
 <span data-ng-repeat="m in messages" style="width: 100%">
   <div class="messages">
   	<div ng-class="m.viewed">
- 		<div data-ng-dblclick="getMessage(m._id); messageshow()" id="message-name-email">
+ 		<div data-ng-click="getMessage(m._id); messageshow()" id="message-name-email">
 	 		<span>//m.name//</span><br/>
 	 		<span style="font-size: 80%; color: rgb(70%,70%, 85%)">//m.email//</span>
 	 	</div>

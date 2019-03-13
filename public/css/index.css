@@ -1,6 +1,7 @@
 .page-header{
 	width: 100%;
 	height: 15%;
+	min-height:70px;
 	background-color: #000020;
 	padding-left: 5%;
 	padding-bottom: 1%
@@ -17,7 +18,6 @@ a{
 }
 .page-div{
 	height: auto;
-
 }
 #design-name{
 	width: 20%;
@@ -72,7 +72,7 @@ div#list-div1{
 	display:inline;
 	float: left;
 	clear:right;
-	color:rgb(50%, 50%, 65%);
+	color:rgb(35%, 35%, 75%);
 	border-right: 2px solid #c6c6f6;
 	text-align: center;
 	margin: 1%;
@@ -97,7 +97,7 @@ div#last-span{
 	width:105px;
 	padding-left:2px;
 	text-align:left;
-	background-color:rgba(80%, 80%, 87%, 0.7);
+	background-color:rgb(80%, 80%, 87%);
 	border-radius: 5%;
 	-webkit-border-radius:5%;
 	-moz-border-radius:5%;
@@ -197,7 +197,7 @@ input#main-search:hover{
 .background1{
 	animation: 3s moves-in;
 	mix-blend-mode:difference;
-	padding: 10% 5% 2% 5%;
+	padding: 5% 5% 2% 5%;
 }
 .background2{
 	color:rgb(0%, 100%, 0%);
