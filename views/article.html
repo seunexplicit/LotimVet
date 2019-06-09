@@ -13,8 +13,8 @@
 	<meta name="keywords" content="Veterinary, start poultry, start pig farming, start cattle farming, Cat Is lovely, Zoonosis Disease">
 	<link type="text/css" media="screen and (min-width: 650px) and (orientation:landscape)" href="/css/index.css" rel="stylesheet">
 	<link type="text/css" media="screen and (min-width: 650px) and (orientation:portrait)" href="/css/indexG650PT.css" rel="stylesheet">
-	<link type="text/css" media="screen and (max-width: 649px ) and (orientation:portrait)" href="/css/indexL650.css" rel="stylesheet">
-	<link type="text/css" media="screen and (max-width: 649px ) and (orientation:landscape)" href="/css/indexL650.css" rel="stylesheet">
+	<link type="text/css" media="screen and (max-width: 649px )" href="/css/indexL650.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/footerAndHeader.css">
 	<link rel="icon" type="image/png" href="/images/vet Logo.png">
 </head>
 <noscript>
@@ -29,7 +29,7 @@
 </noscript>
 <body ng-app="myApp" ng-controller="articleController">
 	<div class="page-div">
-	<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
+	<div ng-include="'/menu.html'" scope="" onload=""></div>
 	<diV class="main-content">
 		<div class="sub-side-bar" id='minor-column1'>
 			<div ng-repeat='a in articles' style="margin: 4px 2px 4px 2px; width: 100%">
@@ -58,26 +58,7 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="clicked-div">
-						<div style="height:22px">
-							<img class="clicked-image" src="//clickedButton1//" 	ng-click="showMenu(2)">
-						</div>
-						<div id="list-div" ng-show="showmenu==true">
-							<div class="menu-list"><a href="/" target="_self">&nbsp Home &nbsp&nbsp</a></div>
-							<div class="menu-list"><a href="/askAVet" target="_self">&nbsp Ask a Vet &nbsp&nbsp</a></div>
-							<div class="menu-list"><a href="/article" target="_self">&nbsp Article &nbsp&nbsp</a></div>
-							<div class="menu-list" id="last-span" ng-mouseenter="animalshow=true" ng-mouseleave="animalshow=false"><div class="animal-popup">&nbsp Animal Menu &nbsp</div><div class="popup" ng-show="animalshow"><p class="sub-menu"><a href="/dog" target="_self">Dog</a></p><p class="sub-menu"><a href="/cat" target="_self">Cat</a></p><p class="sub-menu"><a href="/pig" target="_self">Pig</a></p><p class="sub-menu"><a href="/cattle" target="_self">Cattle</a></p><p class="sub-menu"><a href="/sheep" target="_self">Sheep</a></p><p class="sub-menu"><a href="/goat" target="_self">Goat</a></p><p class="sub-menu"><a href="/poultry" target="_self">Poultry</a></p></div></div>
-						</div>
-				</div>
 			</div>
-		
-				<div id="list-div1">
-					<div class="menu-list"><a href="/" target="_self">&nbsp Home &nbsp&nbsp</a></div>
-					<div class="menu-list"><a href="/askAVet" target="_self">&nbsp Ask a Vet &nbsp&nbsp</a></div>
-					<div class="menu-list"><a href="/article" target="_self">&nbsp Article &nbsp&nbsp</a></div>
-					<div class="menu-list" id="last-span" ng-mouseenter="animalshow=true" ng-mouseleave="animalshow=false"><div class="animal-popup">&nbsp Animal Menu &nbsp</div><div class="popup" ng-show="animalshow"><p class="sub-menu"><a href="/dog" target="_self">Dog</a></p><p class="sub-menu"><a href="/cat" target="_self">Cat</a></p><p class="sub-menu"><a href="/pig" target="_self">Pig</a></p><p class="sub-menu"><a href="/cattle" target="_self">Cattle</a></p><p class="sub-menu"><a href="/sheep" target="_self">Sheep</a></p><p class="sub-menu"><a href="/goat" target="_self">Goat</a></p><p class="sub-menu"><a href="/poultry" target="_self">Poultry</a></p></div></div>
-				</div>
 			<div id="article">
 				<h3 style="text-align: center; text-transform: uppercase; font-size: 120%; text-shadow: -2px -2px 2px #cccccc">//article.title//</h3>
 				<p style="margin-bottom: 10px;"><span class="span-name">written by: <span style="text-transform: uppercase;">//article.author//</span> </span><span class="span-date"> &nbsp&nbsp Date: //article.sDate//</span></p>
@@ -100,16 +81,7 @@
 			</div>
 		</div>
 	</diV>
-	<div class="footer">
-			<div id="Short-note"><div class="Short-note1" ng-class="bgd+'-note'" ng-animate-swap="bgd"><i><b>//shortNote//</b></i></div>
-			</div>
-			<div id="Contact-div">
-				<h4 style="color: rgb(57%, 30%, 63%);">Contact Us</h4>
-				<div style="margin-bottom: 5px;"><img class="link-logo" id="phone-logo" src="/images/phone call.png"><div>+234-815-063-7434, &nbsp&nbsp +234-708-175-2782</div></div>
-				<div style="float: left; clear: both;"><a href="mailto:lotimvetservice@gmail.com"><img class="link-logo" id="gmail-logo" src="/images/Gmail.png"><span>lotimvetservice@gmail.com</span></a></div>
-				<div id="external-link"><div id="facebook-logo-div"><a href="https://www.facebook.com/lotimvetservices"><img class="link-logo" id="facebook-logo" src="/images/Facebook.png"></a></div><div id="instagram-logo-div"><img id="instagram-logo" class="link-logo" src="/images/instagram.png"></div><div id="twitter-logo-div"><a href="https://www.twitter.com/lotimvetservic1"><img id="twitter-logo" class="link-logo" src="/images/Twitter.png"></a></div></div>
-			</div>
-		</div>
+	<div ng-include="'/footer.html'" scope="" onload=""></div>
   </div>
 </body>
 </html>

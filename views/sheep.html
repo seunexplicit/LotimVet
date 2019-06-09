@@ -5,6 +5,7 @@
 	<link rel="icon" type="image/png" href="/images/vet Logo.png">
 	<link rel="stylesheet" media="screen and (min-width: 650px)" type="text/css" href="/css/animalBreeds.css">
 	<link rel="stylesheet" media="screen and (max-width: 649px)" type="text/css" href="/css/animalBreedsL360.css">
+	<link rel="stylesheet" type="text/css" href="/css/footerAndHeader.css">	
 	<script type="text/javascript" src="/js/angular.min.js"></script>
 	<script type="text/javascript" src="/js/angular-animate.min.js"></script>
 	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
@@ -26,8 +27,7 @@
 </noscript>
 <body ng-app="myApp" ng-controller="sheepController">
 	<div class="page-div">
-		<div class="page-header"><img id="design-name" src="/images/DesignedName3.png"/></div>
-		<div data-ng-include="'menu.html'"></div>
+		<div data-ng-include="'/menu.html'"></div>
 		<div><h3>SHEEP BREEDS (Commonly found in Nigeria)</h3></div>
 		<div style="float: left; clear: right;">
 			<div class="side-bar" id="list-of-breed"> 
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 		</div>
-		<div data-ng-include="'footer.html'"></div>
+		<div data-ng-include="'/footer.html'"></div>
 	</div>
 </body>
 </html>
